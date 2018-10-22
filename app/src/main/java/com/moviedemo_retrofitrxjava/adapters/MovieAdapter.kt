@@ -12,9 +12,6 @@ import com.moviedemo_retrofitrxjava.models.Movie
 import com.squareup.picasso.Picasso
 
 
-/**
- * Created by Costi on 10/17/2018.
- */
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 
     val movies = arrayListOf<Movie>()
@@ -40,10 +37,10 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val movieTitle = itemView.findViewById<TextView>(R.id.tvMovieTitle)
-        val movieGenre = itemView.findViewById<TextView>(R.id.tvMovieGenre)
-        val movieYear = itemView.findViewById<TextView>(R.id.tvMovieYear)
-        val movieImage = itemView.findViewById<ImageView>(R.id.imgMovie)
+        private val movieTitle = itemView.findViewById<TextView>(R.id.tvMovieTitle)
+        private val movieGenre = itemView.findViewById<TextView>(R.id.tvMovieGenre)
+        private val movieYear = itemView.findViewById<TextView>(R.id.tvMovieYear)
+        private val movieImage = itemView.findViewById<ImageView>(R.id.imgMovie)
 
         fun bindModel(movie: Movie){
             movieTitle.text = movie.title
